@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282C40"
+    tools:context=".GPSForm">
+
+    <LinearLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardForProfile"
+            android:layout_width="match_parent"
+
+            android:layout_height="120dp"
+            android:background="#2C3043"
+            app:cardBackgroundColor="#2C3043">
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:text="Ivanov Ivan"
+                android:textColor="#ffff"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/town"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="65dp"
+                android:text="Rostov"
+                android:textColor="#ffff"
+                android:textSize="6pt" />
+
+            <ImageView
+                android:id="@+id/picProfile"
+                android:layout_width="54dp"
+                android:layout_height="58dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                app:srcCompat="@drawable/avatar"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="331dp" />
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="45dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="25dp"
+                app:srcCompat="@drawable/menu"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="331dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHistory"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            app:cardBackgroundColor="#282C40">
+
+            <ImageView
+                android:id="@+id/symbol1"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                app:srcCompat="@drawable/symb1"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="331dp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="30dp"
+                android:text="History"
+                android:textColor="#ffff"
+                android:textSize="8pt" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSettings"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            app:cardBackgroundColor="#282C40">
+
+            <ImageView
+                android:id="@+id/symbol2"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                app:srcCompat="@drawable/symb2"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="331dp" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="30dp"
+                android:text="Settings"
+                android:textColor="#ffff"
+                android:textSize="8pt" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".GPSForm" />
+
+    <ImageView
+        android:id="@+id/picMenu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menupic" />
+
+    <TableLayout
+        android:id="@+id/CarBlock"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="1200dp"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="370dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/lox" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+
+
+            >
+
+            <Button
+                android:id="@+id/btnBook"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_span="5"
+                android:width="120dp"
+                android:background="@drawable/btn"
+                android:paddingLeft="20dp"
+                android:text="Book"
+                android:translationX="10dp"
+                android:visibility="visible"
+                app:backgroundTint="#FFB900" />
+        </TableRow>
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
